@@ -3,17 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		34BDBBFDD069BB510B4AD4E8 /* Pods_desafio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E43EA39F7402425B52D9EBA4 /* Pods_desafio.framework */; };
 		F55F87C226179E4C00FEEFB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F87C126179E4C00FEEFB2 /* AppDelegate.swift */; };
 		F55F87C426179E4C00FEEFB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F87C326179E4C00FEEFB2 /* SceneDelegate.swift */; };
-		F55F87C626179E4C00FEEFB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F87C526179E4C00FEEFB2 /* ViewController.swift */; };
+		F55F87C626179E4C00FEEFB2 /* CardListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55F87C526179E4C00FEEFB2 /* CardListVC.swift */; };
 		F55F87C926179E4C00FEEFB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55F87C726179E4C00FEEFB2 /* Main.storyboard */; };
 		F55F87CB26179E4F00FEEFB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F55F87CA26179E4F00FEEFB2 /* Assets.xcassets */; };
 		F55F87CE26179E4F00FEEFB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55F87CC26179E4F00FEEFB2 /* LaunchScreen.storyboard */; };
+		F5799A992619662F0029865F /* CardDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799A982619662F0029865F /* CardDetailVC.swift */; };
+		F5FED9D02617AF1B0058531A /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FED9CF2617AF1B0058531A /* HTTPManager.swift */; };
+		F5FED9E12618977D0058531A /* CardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FED9E02618977D0058531A /* CardListViewModel.swift */; };
+		F5FED9E426189DD00058531A /* CardListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FED9E326189DD00058531A /* CardListModel.swift */; };
+		F5FED9E726189DFC0058531A /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FED9E626189DFC0058531A /* ErrorModel.swift */; };
+		F5FED9EE2618F02B0058531A /* SpinnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FED9ED2618F02B0058531A /* SpinnerVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,11 +29,17 @@
 		F55F87BE26179E4C00FEEFB2 /* desafio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desafio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55F87C126179E4C00FEEFB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F55F87C326179E4C00FEEFB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F55F87C526179E4C00FEEFB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F55F87C526179E4C00FEEFB2 /* CardListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListVC.swift; sourceTree = "<group>"; };
 		F55F87C826179E4C00FEEFB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F55F87CA26179E4F00FEEFB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F55F87CD26179E4F00FEEFB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F55F87CF26179E4F00FEEFB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5799A982619662F0029865F /* CardDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailVC.swift; sourceTree = "<group>"; };
+		F5FED9CF2617AF1B0058531A /* HTTPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPManager.swift; sourceTree = "<group>"; };
+		F5FED9E02618977D0058531A /* CardListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModel.swift; sourceTree = "<group>"; };
+		F5FED9E326189DD00058531A /* CardListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListModel.swift; sourceTree = "<group>"; };
+		F5FED9E626189DFC0058531A /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		F5FED9ED2618F02B0058531A /* SpinnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +68,6 @@
 				BB9341A88F436ACBEABBD540 /* Pods-desafio.debug.xcconfig */,
 				7AC230590C804D25ADC0C08A /* Pods-desafio.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +92,53 @@
 		F55F87C026179E4C00FEEFB2 /* desafio */ = {
 			isa = PBXGroup;
 			children = (
+				F5FED9CD2617AAC80058531A /* view */,
+				F5FED9CC2617AAB10058531A /* viewModel */,
+				F5FED9CB2617AA9D0058531A /* model */,
+				F5FED9CA2617AA8E0058531A /* service */,
 				F55F87C126179E4C00FEEFB2 /* AppDelegate.swift */,
 				F55F87C326179E4C00FEEFB2 /* SceneDelegate.swift */,
-				F55F87C526179E4C00FEEFB2 /* ViewController.swift */,
-				F55F87C726179E4C00FEEFB2 /* Main.storyboard */,
 				F55F87CA26179E4F00FEEFB2 /* Assets.xcassets */,
 				F55F87CC26179E4F00FEEFB2 /* LaunchScreen.storyboard */,
 				F55F87CF26179E4F00FEEFB2 /* Info.plist */,
 			);
 			path = desafio;
+			sourceTree = "<group>";
+		};
+		F5FED9CA2617AA8E0058531A /* service */ = {
+			isa = PBXGroup;
+			children = (
+				F5FED9CF2617AF1B0058531A /* HTTPManager.swift */,
+			);
+			name = service;
+			sourceTree = "<group>";
+		};
+		F5FED9CB2617AA9D0058531A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F5FED9E326189DD00058531A /* CardListModel.swift */,
+				F5FED9E626189DFC0058531A /* ErrorModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F5FED9CC2617AAB10058531A /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F5FED9E02618977D0058531A /* CardListViewModel.swift */,
+			);
+			name = viewModel;
+			sourceTree = "<group>";
+		};
+		F5FED9CD2617AAC80058531A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F55F87C726179E4C00FEEFB2 /* Main.storyboard */,
+				F55F87C526179E4C00FEEFB2 /* CardListVC.swift */,
+				F5FED9ED2618F02B0058531A /* SpinnerVC.swift */,
+				F5799A982619662F0029865F /* CardDetailVC.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +152,7 @@
 				F55F87BA26179E4C00FEEFB2 /* Sources */,
 				F55F87BB26179E4C00FEEFB2 /* Frameworks */,
 				F55F87BC26179E4C00FEEFB2 /* Resources */,
+				F9AC1DD08B2F52FF5494A04D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,6 +231,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F9AC1DD08B2F52FF5494A04D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-desafio/Pods-desafio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-desafio/Pods-desafio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-desafio/Pods-desafio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -188,9 +255,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F55F87C626179E4C00FEEFB2 /* ViewController.swift in Sources */,
+				F5FED9E726189DFC0058531A /* ErrorModel.swift in Sources */,
+				F5799A992619662F0029865F /* CardDetailVC.swift in Sources */,
+				F5FED9E12618977D0058531A /* CardListViewModel.swift in Sources */,
+				F55F87C626179E4C00FEEFB2 /* CardListVC.swift in Sources */,
 				F55F87C226179E4C00FEEFB2 /* AppDelegate.swift in Sources */,
+				F5FED9EE2618F02B0058531A /* SpinnerVC.swift in Sources */,
 				F55F87C426179E4C00FEEFB2 /* SceneDelegate.swift in Sources */,
+				F5FED9D02617AF1B0058531A /* HTTPManager.swift in Sources */,
+				F5FED9E426189DD00058531A /* CardListModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

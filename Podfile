@@ -6,5 +6,8 @@ target 'desafio' do
   use_frameworks!
 
   # Pods for desafio
-
+    pod 'RxSwift', '6.1.0'
+    pod 'RxCocoa', '6.1.0'
+    pod 'Alamofire', '~> 5.2'
+    pod 'PINRemoteImage'
 end
