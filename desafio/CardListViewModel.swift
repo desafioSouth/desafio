@@ -7,12 +7,13 @@ class CardListViewModel{
     public let cards:PublishSubject<CardListModel> = PublishSubject()
     public let error:PublishSubject<ErrorModel> = PublishSubject()
     public let loading:PublishSubject<Bool> = PublishSubject()
+    
     private let httpManager:HTTPManager = HTTPManager()
+    private let getCardsUrl:String = "https://api.magicthegathering.io/v1/cards"
     
     func getCards(){
-        let url = "https://api.magicthegathering.io/v1/cards"
         loading.onNext(true)
-        httpManager.get(url) { (result) in
+        httpManager.get(getCardsUrl) { (result) in
             var cardModel:CardListModel? = nil
             self.loading.onNext(false)
             do{
@@ -22,7 +23,8 @@ class CardListViewModel{
                 return
             }
             
-            if let parsedCards = cardModel{
+            if var parsedCards = cardModel{
+                parsedCards.cards = parsedCards.cards?.sorted(by: {$0.name?.compare($1.name ?? "") == .orderedAscending })
                 self.cards.onNext(parsedCards)
             }else{
                 self.error.onNext(ErrorModel(statusCode: nil,errorMessage: "Ocorreu um erro inesperado!"))

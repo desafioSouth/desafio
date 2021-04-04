@@ -23,8 +23,6 @@ class HTTPManager {
                     if (statusCode >= 200 && statusCode < 300){
                         success(data)
                     }else{
-                        error(ErrorModel(statusCode: statusCode, errorMessage: "Internet indisponível"))
-                        
                         if(statusCode == 400){
                             error(ErrorModel(statusCode: statusCode, errorMessage: "Não conseguimos processar essa ação!"))
                         }else if(statusCode == 403){

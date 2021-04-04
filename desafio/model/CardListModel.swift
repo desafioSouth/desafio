@@ -2,7 +2,7 @@ import Foundation
 
 // MARK: - CardListModel
 struct CardListModel: Codable {
-    let cards: [Card]?
+    var cards: [Card]?
 }
 
 // MARK: - Card
