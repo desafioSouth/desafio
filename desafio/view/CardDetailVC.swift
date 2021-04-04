@@ -1,16 +1,9 @@
-//
-//  CardDetailVC.swift
-//  desafio
-//
-//  Created by João Francisco Muller on 04/04/21.
-//
-
 import Foundation
 import UIKit
 import PINRemoteImage
 
 class CardDetail: UIViewController{
-   
+    
     @IBOutlet var cardImage: UIImageView!
     @IBOutlet var name: UILabel!
     @IBOutlet var cmcValue: UILabel!

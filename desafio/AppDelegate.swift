@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  desafio
-//
-//  Created by João Francisco Muller on 02/04/21.
-//
-
 import UIKit
 
 @main

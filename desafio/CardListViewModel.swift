@@ -1,10 +1,3 @@
-//
-//  CardListViewModel.swift
-//  desafio
-//
-//  Created by João Francisco Muller on 03/04/21.
-//
-
 import Foundation
 import RxSwift
 import RxCocoa
@@ -27,15 +20,16 @@ class CardListViewModel{
             } catch {
                 self.error.onNext(ErrorModel(statusCode: nil,errorMessage: "Ocorreu um erro inesperado!"))
                 return
-           }
-          
+            }
+            
             if let parsedCards = cardModel{
                 self.cards.onNext(parsedCards)
             }else{
                 self.error.onNext(ErrorModel(statusCode: nil,errorMessage: "Ocorreu um erro inesperado!"))
             }
-      
+            
         } _: { (errorModel) in
+            self.loading.onNext(false)
             self.error.onNext(errorModel)
         }
     }

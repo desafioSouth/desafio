@@ -1,8 +1,3 @@
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let cardListModel = try? newJSONDecoder().decode(CardListModel.self, from: jsonData)
-
 import Foundation
 
 // MARK: - CardListModel
@@ -27,7 +22,7 @@ struct Card: Codable {
     let originalText, originalType: String?
     let legalities: [LegalityElement]?
     let id, flavor: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case name, manaCost, cmc, colors, colorIdentity, type, types, subtypes, rarity
         case cardSet = "set"
@@ -43,7 +38,7 @@ struct ForeignName: Codable {
     let imageURL: String?
     let language: String?
     let multiverseid: Int?
-
+    
     enum CodingKeys: String, CodingKey {
         case name, text, type, flavor
         case imageURL = "imageUrl"

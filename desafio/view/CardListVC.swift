@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  desafio
-//
-//  Created by João Francisco Muller on 02/04/21.
-//
-
 import UIKit
 import RxSwift
 import PINRemoteImage
@@ -22,6 +15,9 @@ class CardListVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         bindData()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         viewModel.getCards()
     }
 }
@@ -61,16 +57,16 @@ extension CardListVC: UITableViewDelegate, UITableViewDataSource {
 extension CardListVC {
     func showSpinner(_ show:Bool) {
         if(show){
-        addChild(spinner)
-        spinner.view.frame = view.frame
-        view.addSubview(spinner.view)
-        spinner.didMove(toParent: self)
+            addChild(spinner)
+            spinner.view.frame = view.frame
+            view.addSubview(spinner.view)
+            spinner.didMove(toParent: self)
         }else{
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
-            self.spinner.willMove(toParent: nil)
-            self.spinner.view.removeFromSuperview()
-            self.spinner.removeFromParent()
-        }
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
+                self.spinner.willMove(toParent: nil)
+                self.spinner.view.removeFromSuperview()
+                self.spinner.removeFromParent()
+            }
         }
     }
 }
@@ -89,7 +85,7 @@ class CardCell:UITableViewCell{
             self.cmc.text = unwrappedCard.cmc?.description ?? ""
             self.cardImage.image = UIImage(named:"placeholderCard")
             if let imageUrl = unwrappedCard.imageURL , !(unwrappedCard.imageURL?.isEmpty ?? false){
-            self.cardImage.pin_setImage(from: URL(string:imageUrl))
+                self.cardImage.pin_setImage(from: URL(string:imageUrl))
             }
         }
     }
@@ -99,26 +95,26 @@ class CardCell:UITableViewCell{
 extension CardListVC {
     private func bindData(){
         viewModel.loading
-                .observe(on: MainScheduler.instance)
-                .subscribe(onNext: { (loading) in
-                    self.showSpinner(loading)
-                })
-                .disposed(by: disposeBag)
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { (loading) in
+                self.showSpinner(loading)
+            })
+            .disposed(by: disposeBag)
         
         viewModel.cards
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { (cards) in
                 self.cardList = cards
                 self.tableView.reloadData()
-                })
-                .disposed(by: disposeBag)
+            })
+            .disposed(by: disposeBag)
         
         viewModel.error
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { (error) in
                 self.showError(error: error)
-                })
-                .disposed(by: disposeBag)
+            })
+            .disposed(by: disposeBag)
     }
 }
 // MARK: - Error message
